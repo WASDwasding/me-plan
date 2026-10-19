@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="dark">
+  <title>申请进度 · me-plan</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23101318'/%3E%3Crect x='2' y='7' width='12' height='2' fill='%23232a35'/%3E%3Crect x='2' y='7' width='5' height='2' fill='%238eb0cc'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-name">me-plan</span>
+        <span class="brand-sub">scheduler</span>
+      </div>
+      <p class="sys">单核并发 · 时间片轮转 · 分治拆解</p>
+    </header>
+
+    <main id="app"></main>
+    <p id="live" class="sr-only" aria-live="polite"></p>
+
+    <footer class="foot">
+      <div class="foot-copy">
+        <p>叶子权重：待完成 0，进行中 0.5，已完成 1。每一层按直接子节点等权平均，不是把全部叶子铺平。总进度是六条支线的等权平均。</p>
+        <p>增删任务改 <code>js/data.js</code>。页面上点过的状态写在本机浏览器里，同一个 id 以本机记录为准。</p>
+      </div>
+      <button type="button" id="reset" class="text-btn">重置为代码预设</button>
+    </footer>
+  </div>
+  <noscript>需要启用 JavaScript。这是纯前端页面，没有后端。</noscript>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
