@@ -3,7 +3,7 @@
  * 点一支线进入它的分解树。点叶子切换状态，进度向上汇总。
  */
 (function () {
-  var STORAGE_KEY = "me-plan.status.v2";
+  var STORAGE_KEY = "me-plan.status.v3";
   var WEIGHT = { todo: 0, active: 0.5, done: 1 };
   var LABEL = { todo: "待完成", active: "进行中", done: "已完成" };
 

@@ -6,4 +6,4 @@
 
 公网地址：https://wasdwasding.github.io/me-plan/
 
-改任务、改名字、加一层，都编辑 `js/data.js`。页面上点过的状态在本机 `me-plan.status.v2`，同一个 id 以本机记录为准。清空这个站点的本地数据后，会回到文件里的预设。
+改任务、改名字、加一层，都编辑 `js/data.js`。页面上点过的状态在本机 `me-plan.status.v3`，同一个 id 以本机记录为准。清空这个站点的本地数据后，会回到文件里的预设。

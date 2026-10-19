@@ -6,7 +6,7 @@
  * 父节点进度 = 直接子节点的平均。总进度 = 五条支线的平均。
  * 想让某一支更重，加 weight: 2。
  *
- * 页面上点过的状态记在本机（me-plan.status.v2），同一个 id 以本机为准。
+ * 页面上点过的状态记在本机（me-plan.status.v3），同一个 id 以本机为准。
  * 把项目名改成你自己的：直接改下面的 name。
  */
 window.PLAN = {
@@ -32,22 +32,16 @@ window.PLAN = {
           id: "gpa.later",
           name: "后面的课",
           children: [
-            { id: "gpa.later.hold", name: "别再掉分", status: "active" },
+            { id: "gpa.later.hold", name: "提分", status: "active" },
           ],
         },
-        {
-          id: "gpa.doc",
-          name: "成绩单",
-          children: [
-            { id: "gpa.doc.put", name: "放进申请", status: "todo" },
-          ],
-        },
+        { id: "gpa.doc.put", name: "达到3.5", status: "todo" },
       ],
     },
     {
       id: "language",
       name: "语言",
-      fact: "韩语最高级 · 英语备考",
+      fact: "TOPIK 6 · 英语备考",
       side: "right",
       x: "80%",
       y: "32%",
@@ -56,8 +50,7 @@ window.PLAN = {
           id: "language.ko",
           name: "韩语",
           children: [
-            { id: "language.ko.top", name: "最高级", status: "done" },
-            { id: "language.ko.proof", name: "证明收好", status: "done" },
+            { id: "language.ko.top", name: "TOPIK 6", status: "done" },
           ],
         },
         {
@@ -65,8 +58,8 @@ window.PLAN = {
           name: "英语",
           children: [
             { id: "language.en.vocab", name: "词汇", status: "active" },
-            { id: "language.en.listen", name: "听力阅读", status: "todo" },
-            { id: "language.en.speak", name: "写作口语", status: "todo" },
+            { id: "language.en.listen", name: "听力阅读", status: "active" },
+            { id: "language.en.speak", name: "写作口语", status: "active" },
             { id: "language.en.mock", name: "模考", status: "todo" },
             { id: "language.en.exam", name: "考雅思", status: "todo" },
           ],
@@ -93,9 +86,8 @@ window.PLAN = {
           id: "project.research",
           name: "研究型",
           children: [
-            { id: "project.research.topic", name: "定题目", status: "active" },
-            { id: "project.research.build", name: "做出来", status: "todo" },
-            { id: "project.research.cv", name: "写进简历", status: "todo" },
+            { id: "project.research.build", name: "实验", status: "active" },
+            { id: "project.research.cv", name: "发表论文", status: "todo" },
           ],
         },
       ],
@@ -121,7 +113,6 @@ window.PLAN = {
           children: [
             { id: "intern.lab.teacher", name: "找愿意带的老师", status: "active" },
             { id: "intern.lab.join", name: "进组做科研实习", status: "todo" },
-            { id: "intern.lab.cv", name: "写进简历", status: "todo" },
           ],
         },
       ],
@@ -134,22 +125,8 @@ window.PLAN = {
       x: "20%",
       y: "82%",
       children: [
-        {
-          id: "contest.play",
-          name: "参赛",
-          children: [
-            { id: "contest.play.join", name: "能报的就报", status: "active" },
-            { id: "contest.play.log", name: "比完记下来", status: "todo" },
-          ],
-        },
-        {
-          id: "contest.cv",
-          name: "履历",
-          children: [
-            { id: "contest.cv.proof", name: "证书收齐", status: "todo" },
-            { id: "contest.cv.count", name: "按数量写上", status: "todo" },
-          ],
-        },
+        { id: "contest.done", name: "已完成/获奖", status: "done" },
+        { id: "contest.more", name: "比赛质量是没法提太多了，再加数量吧", status: "active" },
       ],
     },
   ],
